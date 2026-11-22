@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chocolate House - Treats</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #fff8f3;
+}
+
+.treat-strip {
+    width: 100%;
+    padding: 35px 0 30px;
+    background: #fff8f3;
+    overflow: hidden;
+}
+
+.treat-strip h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 1000;
+    color: #70412f;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+}
+
+.treat-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.treat-track {
+    display: flex;
+    width: max-content;
+    animation: treatScroll 30s linear infinite;
+}
+
+.treat-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    padding: 0 17px;
+    flex-shrink: 0;
+}
+
+.treat-card {
+    width: 145px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.treat-circle {
+    width: 108px;
+    height: 108px;
+    border: 1px solid #bba99d;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    transition: transform .3s ease;
+}
+
+.treat-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.treat-card:hover .treat-circle {
+    transform: scale(1.08);
+}
+
+.treat-card h3 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 900;
+    color: #57372f;
+}
+
+/* Infinite right-to-left animation */
+@keyframes treatScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.treat-marquee:hover .treat-track {
+    animation-play-state: paused;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .treat-strip {
+        padding: 25px 0;
+    }
+
+    .treat-strip h2 {
+        font-size: 20px;
+        margin-bottom: 22px;
+    }
+
+    .treat-group {
+        gap: 20px;
+    }
+
+    .treat-card {
+        width: 105px;
+    }
+
+    .treat-circle {
+        width: 82px;
+        height: 82px;
+    }
+
+    .treat-card h3 {
+        font-size: 12px;
+    }
+
+    .treat-track {
+        animation-duration: 24s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .treat-track {
+        animation: none;
+    }
+
+    .treat-group[aria-hidden="true"] {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="treat-strip">
+
+    <h2>EXPLORE OUR TREATS</h2>
+
+    <div class="treat-marquee">
+        <div class="treat-track">
+
+            <!-- First set -->
+            <div class="treat-group">
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=85" alt="Chocolate cake">
+                    </div>
+                    <h3>Cakes</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=85" alt="Pastries">
+                    </div>
+                    <h3>Pastries</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=400&q=85" alt="Cookies">
+                    </div>
+                    <h3>Cookies</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=400&q=85" alt="Brownies">
+                    </div>
+                    <h3>Brownies</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=85" alt="Ice cream sundae">
+                    </div>
+                    <h3>Sundaes</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="truffle.jpg" alt="Chocolate truffles">
+                    </div>
+                    <h3>Truffles</h3>
+                </div>
+
+            </div>
+
+            <!-- Duplicate set for seamless loop -->
+            <div class="treat-group" aria-hidden="true">
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=85" alt="">
+                    </div>
+                    <h3>Cakes</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=85" alt="">
+                    </div>
+                    <h3>Pastries</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=400&q=85" alt="">
+                    </div>
+                    <h3>Cookies</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=400&q=85" alt="">
+                    </div>
+                    <h3>Brownies</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=85" alt="">
+                    </div>
+                    <h3>Sundaes</h3>
+                </div>
+
+                <div class="treat-card">
+                    <div class="treat-circle">
+                        <img src="truffle.jpg" alt="">
+                    </div>
+                    <h3>Truffles</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

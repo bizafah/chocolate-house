@@ -1,0 +1,672 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbe7e8">
+  <meta name="description" content="The Chocolate House â€” freshly baked brownies, cookies, pastries and chocolates in Islamabad.">
+  <title>The Chocolate House | Hero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900;1000&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+/* ===== CONTACT SECTION ===== */
+.contact-section{background:linear-gradient(160deg,#2d1810 0%,#4a1f12 100%);padding:80px clamp(20px,5vw,80px) 60px}
+.contact-inner{max-width:900px;margin:0 auto;text-align:center}
+.contact-eyebrow{display:block;font-size:11px;font-weight:900;letter-spacing:.2em;color:#f5bd4e;margin-bottom:14px}
+.contact-heading h2{font-family:'Nunito',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:1000;color:#fff;margin:0 0 12px}
+.contact-heading p{color:rgba(255,255,255,.65);font-size:15px;font-weight:600;margin:0 0 48px}
+.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px}
+.contact-card{display:flex;align-items:center;gap:22px;padding:28px 30px;border-radius:20px;text-decoration:none;transition:transform .22s,box-shadow .22s;text-align:left}
+.contact-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.contact-wa{background:linear-gradient(135deg,#1a5c35,#25d366 200%);color:#fff}
+.contact-ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff}
+.contact-card-icon{flex-shrink:0;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center}
+.contact-card-icon svg{width:26px;height:26px}
+.contact-card-body h3{margin:0 0 4px;font-size:18px;font-weight:1000;color:#fff}
+.contact-card-body p{margin:0 0 10px;font-size:13px;color:rgba(255,255,255,.8);font-weight:600;line-height:1.4}
+.contact-card-cta{font-size:13px;font-weight:900;color:#fff;letter-spacing:.04em}
+.contact-note{color:rgba(255,255,255,.4);font-size:12px;font-weight:700;letter-spacing:.06em}
+.contact-dot{margin:0 10px}
+.site-footer{background:#1a0d08;text-align:center;padding:20px;color:rgba(255,255,255,.3);font-size:11px;font-weight:700;letter-spacing:.08em}
+@media(max-width:620px){.contact-cards{grid-template-columns:1fr}.contact-card{padding:22px 20px}}
+
+/* ===== 4TH SECTION: SHOP ===== */
+.shop-section-wrap *{box-sizing:border-box}
+.shop-section-wrap{--cream:#fff7f1;--cream2:#fffaf6;--pink:#f7e1e3;--pinkline:#f0cbd0;--rose:#a12d50;--rose-dark:#761f3b;--choco:#59372d;--muted:#94766d;--gold:#f5bd4e;--shadow:0 9px 25px rgba(91,44,48,.08)}
+.shop-banner{position:relative;min-height:480px;overflow:hidden;background:#efb143;color:white}
+.shop-banner-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
+.shop-banner-overlay{position:absolute;inset:0 0 auto;display:flex;justify-content:space-between;align-items:flex-start;padding:15px clamp(15px,4vw,55px);pointer-events:none}
+.shop-banner-topline{display:flex;flex-direction:column;gap:3px;text-shadow:0 2px 8px rgba(77,38,20,.25);font-weight:1000;letter-spacing:.12em;font-size:10px}
+.shop-banner-topline span:first-child{font-size:12px}
+.shop-cart-open{pointer-events:auto;display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.65);border-radius:30px;padding:9px 15px;background:rgba(84,48,36,.88);color:white;font-size:12px;font-weight:900;box-shadow:0 5px 16px rgba(60,30,20,.15);cursor:pointer;font-family:inherit}
+.shop-cart-icon{font-size:17px}
+.shop-cart-open b{display:grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:50%;background:var(--gold);color:#543322;font-size:11px}
+.shop-banner-benefits{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:center;gap:clamp(13px,3vw,42px);padding:11px 12px;background:rgba(255,248,236,.92);color:#67422f}
+.shop-banner-benefits>div{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:1000;letter-spacing:.07em}
+.shop-benefit-icon{width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:#573d35;color:#fff;font-size:16px}
+.shop-section{padding:48px clamp(15px,4vw,56px) 58px;background:linear-gradient(145deg,#fff8f3,#fff0ef)}
+.shop-section-heading{text-align:center;margin:0 auto 28px}
+.shop-eyebrow{display:block;color:var(--rose);font-size:10px;font-weight:1000;letter-spacing:.18em}
+.shop-section-heading h2{margin:7px 0 4px;color:var(--rose-dark);font-size:clamp(32px,4vw,48px);font-weight:1000;letter-spacing:-.05em;line-height:1}
+.shop-section-heading p,.shop-coming-heading p{margin:9px 0 0;color:var(--muted);font-size:14px;font-weight:700}
+.shop-heading-swish{display:block;width:86px;height:6px;margin:15px auto 0;border-radius:10px;background:var(--gold)}
+.shop-toolbar{max-width:1600px;margin:0 auto 24px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.shop-filters{display:flex;gap:8px;flex-wrap:wrap}
+.shop-filter-btn{border:1px solid #d9aeb6;border-radius:30px;padding:9px 17px;background:transparent;color:var(--rose-dark);font-size:12px;font-weight:900;transition:.2s;cursor:pointer;font-family:inherit}
+.shop-filter-btn:hover,.shop-filter-btn.active{background:var(--rose-dark);border-color:var(--rose-dark);color:#fff}
+.shop-search-box{display:flex;align-items:center;gap:8px;min-width:210px;padding:8px 13px;border:1px solid var(--pinkline);border-radius:30px;background:#fff;color:var(--muted)}
+.shop-search-box span{font-size:22px;line-height:1}
+.shop-search-box input{width:100%;border:0;outline:0;background:transparent;color:var(--choco);font-size:12px;font-family:inherit}
+.shop-product-grid{max-width:1600px;margin:0 auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}
+.shop-product-card{min-width:0;overflow:hidden;border:1px solid #f3dadd;border-radius:17px;background:rgba(255,251,248,.96);box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s}
+.shop-product-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(91,44,48,.13)}
+.shop-product-image{position:relative;height:180px;overflow:hidden;background:#fff0e9}
+.shop-product-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s}
+.shop-product-card:hover .shop-product-image img{transform:scale(1.045)}
+.shop-product-info{padding:14px 14px 15px}
+.shop-product-category{color:#b17669;font-size:9px;font-weight:1000;letter-spacing:.13em;text-transform:uppercase}
+.shop-product-info h3{min-height:40px;margin:5px 0 4px;color:#58372d;font-size:15px;line-height:1.25;font-weight:1000}
+.shop-product-description{min-height:31px;margin:0;color:#9b7d72;font-size:11px;line-height:1.4;font-weight:700}
+.shop-product-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:13px}
+.shop-product-price{color:var(--rose-dark);font-size:15px;font-weight:1000;white-space:nowrap}
+.shop-add-button{border:0;border-radius:30px;padding:9px 12px;background:var(--rose-dark);color:white;font-size:11px;font-weight:1000;white-space:nowrap;transition:background .2s,transform .2s;cursor:pointer;font-family:inherit}
+.shop-add-button:hover{background:#a83255;transform:translateY(-1px)}
+.shop-add-button span{font-size:14px;margin-right:4px}
+.shop-empty-state{padding:28px;text-align:center;color:var(--muted);font-weight:800}
+.shop-coming-section{max-width:1600px;margin:52px auto 0;padding:28px;border:1px solid var(--pinkline);border-radius:22px;background:rgba(255,250,247,.78)}
+.shop-coming-heading{text-align:center;margin-bottom:22px}
+.shop-coming-heading h2{margin:7px 0 0;color:var(--rose-dark);font-size:clamp(25px,3vw,34px);font-weight:1000}
+.shop-coming-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.shop-coming-soon-card{box-shadow:none}
+.shop-coming-soon-card .shop-product-image{height:145px}
+.shop-coming-badge{position:absolute;left:10px;top:10px;padding:6px 10px;border-radius:30px;background:var(--gold);color:#563728;font-size:9px;font-weight:1000;text-transform:uppercase;letter-spacing:.06em}
+.shop-coming-price{color:var(--rose);font-size:13px;font-weight:1000}
+.shop-add-button.disabled{background:#e9d9d7;color:#806e68;cursor:not-allowed}
+.shop-menu-note{margin:24px 0 0;text-align:center;color:var(--muted);font-size:11px;font-weight:700}
+.shop-cart-backdrop{position:fixed;inset:0;z-index:40;background:rgba(44,24,24,.38);opacity:0;visibility:hidden;transition:.25s}
+.shop-cart-backdrop.show{opacity:1;visibility:visible}
+.shop-cart-drawer{position:fixed;z-index:41;top:0;right:0;width:min(440px,100%);height:100dvh;display:flex;flex-direction:column;background:#fffaf7;box-shadow:-12px 0 35px rgba(55,26,30,.15);transform:translateX(105%);transition:transform .3s ease}
+.shop-cart-drawer.open{transform:translateX(0)}
+.shop-cart-header{display:flex;justify-content:space-between;align-items:center;padding:23px 22px 18px;border-bottom:1px solid var(--pinkline)}
+.shop-cart-header h2{margin:4px 0 0;color:var(--rose-dark);font-size:24px;font-weight:1000}
+.shop-cart-close{width:36px;height:36px;border:0;border-radius:50%;background:#f7e5e5;color:var(--rose-dark);font-size:25px;line-height:1;cursor:pointer;font-family:inherit}
+.shop-cart-items{flex:1;overflow:auto;padding:12px 20px}
+.shop-cart-empty{padding:30px 8px;text-align:center;color:var(--muted);font-weight:800}
+.shop-cart-line{display:grid;grid-template-columns:58px 1fr auto;gap:11px;align-items:center;padding:13px 0;border-bottom:1px solid #f1e0df}
+.shop-cart-line img{width:58px;height:58px;border-radius:12px;object-fit:cover;background:#fff0e9}
+.shop-cart-line h3{margin:0 0 3px;color:var(--choco);font-size:13px;font-weight:1000}
+.shop-cart-line .shop-line-price{color:var(--rose-dark);font-size:12px;font-weight:900}
+.shop-qty-controls{display:flex;align-items:center;gap:7px;margin-top:7px}
+.shop-qty-controls button{width:23px;height:23px;border:1px solid var(--pinkline);border-radius:50%;background:#fff;color:var(--rose-dark);font-weight:1000;cursor:pointer;font-family:inherit}
+.shop-qty-controls span{min-width:15px;text-align:center;font-size:12px;font-weight:900}
+.shop-remove-line{border:0;background:transparent;color:#b66b7c;font-size:11px;font-weight:900;cursor:pointer;font-family:inherit}
+.shop-cart-footer{padding:18px 22px 22px;border-top:1px solid var(--pinkline);background:#fff6f2}
+.shop-subtotal-line{display:flex;justify-content:space-between;color:var(--choco);font-size:15px;font-weight:900}
+.shop-subtotal-line strong{color:var(--rose-dark);font-size:19px}
+.shop-cart-disclaimer{margin:8px 0 14px;color:var(--muted);font-size:10px;line-height:1.4}
+.shop-checkout-button,.shop-continue-button{width:100%;border:0;border-radius:30px;padding:13px 16px;font-size:13px;font-weight:1000;cursor:pointer;font-family:inherit}
+.shop-checkout-button{display:flex;justify-content:center;gap:10px;background:#248b55;color:#fff}
+.shop-checkout-button:disabled{background:#d7cbc7;color:#81746f;cursor:not-allowed}
+.shop-continue-button{margin-top:8px;background:transparent;color:var(--rose-dark)}
+.shop-toast{position:fixed;z-index:60;left:50%;bottom:22px;transform:translate(-50%,20px);padding:11px 18px;border-radius:30px;background:#59372d;color:#fff;font-size:12px;font-weight:900;opacity:0;pointer-events:none;transition:.25s}
+.shop-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1250px){.shop-product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.shop-coming-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.shop-product-image{height:165px}}
+@media(max-width:950px){.shop-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.shop-coming-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.shop-banner{min-height:380px}.shop-banner-benefits{gap:14px}.shop-banner-benefits>div{font-size:9px}}
+@media(max-width:620px){.shop-banner{min-height:320px}.shop-banner-art{object-position:center}.shop-banner-topline{font-size:8px}.shop-banner-topline span:first-child{font-size:10px}.shop-banner-benefits{justify-content:space-around;gap:5px;padding:8px 5px}.shop-banner-benefits>div{flex-direction:column;gap:3px;font-size:7px;letter-spacing:0;text-align:center}.shop-benefit-icon{width:24px;height:24px;font-size:13px}.shop-section{padding:35px 12px 42px}.shop-section-heading p{font-size:12px}.shop-toolbar{align-items:stretch}.shop-filters{gap:6px}.shop-filter-btn{padding:8px 11px;font-size:10px}.shop-search-box{width:100%}.shop-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shop-product-image{height:135px}.shop-product-info{padding:11px}.shop-product-info h3{font-size:13px;min-height:34px}.shop-product-description{font-size:10px}.shop-product-bottom{align-items:flex-start;flex-direction:column;gap:8px}.shop-add-button{width:100%}.shop-coming-section{margin-top:35px;padding:17px 12px}.shop-coming-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shop-coming-soon-card .shop-product-image{height:120px}.shop-coming-soon-card .shop-product-bottom{flex-direction:column}.shop-cart-line{grid-template-columns:50px 1fr auto;gap:8px}.shop-cart-line img{width:50px;height:50px}}
+  </style>
+</head>
+<body>
+  <div class="promo-bar">
+    <span>FRESHLY BAKED WITH LOVE</span>
+    <span>ISLAMABAD</span>
+  </div>
+
+  <header class="hero-header">
+    <a class="brand" href="#home" aria-label="The Chocolate House home">
+      <span class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="img">
+          <path d="M5 21.5 24 5l19 16.5M11 19v23h26V19M20 42V28h8v14" />
+          <path d="M24 15c-4-5-10 1-4 6l4 3 4-3c6-5 0-11-4-6Z" />
+        </svg>
+      </span>
+      <span class="brand-copy"><strong>The Chocolate House</strong><small>HOME BAKERY</small></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home">HOME</a>
+      <a href="#menu">MENU</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#story">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE PIECE OF HAPPINESS</p>
+
+        <h1 id="heroTitle">
+          <span class="headline-line first-line">BAKING <em>Endless</em></span>
+          <span class="headline-line">HAPPINESS</span>
+          <span class="headline-line">FOR EVERY</span>
+          <span class="headline-line last-line">HEART<span class="taste-note">Taste The Joy!</span></span>
+        </h1>
+
+        <p class="hero-description">
+          Brownies, cookies, pastries and chocolate treats â€” freshly made with love.
+        </p>
+
+        <a class="hero-button" href="#menu">
+          <span>Explore Our Menu</span>
+          <span class="button-arrow" aria-hidden="true"></span>
+        </a>
+
+        <div class="hero-signoff">
+          HOMEMADE · PREMIUM INGREDIENTS · MADE WITH LOVE
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Transparent cutout collage of chocolate desserts">
+        <div class="yellow-swoosh" aria-hidden="true"></div>
+        <img class="dessert-cutouts"
+          src="assets/dessert-cutouts.png"
+          alt="Floating cutout desserts: chocolate brownies, chocolate chip cookies, truffles, a chocolate pastry and cake"
+          fetchpriority="high">
+        <div class="art-note">
+          <svg viewBox="0 0 70 42" aria-hidden="true">
+            <path d="M3 31C20 2 42 3 50 15c7 11-6 22-16 13-7-6-1-15 8-14M50 14l-2-10m2 10 11-3" />
+          </svg>
+          <span>100%<br>CHOCOLATE<br>HAPPINESS</span>
+        </div>
+        <span class="doodle doodle-star" aria-hidden="true"></span>
+      </div>
+
+      <div class="hero-bottom-note" aria-hidden="true">
+        FRESHLY BAKED · SHARED WITH LOVE · MADE IN ISLAMABAD
+      </div>
+    </section>
+
+    <!-- ===== TREAT STRIP / 2ND SECTION ===== -->
+    <section class="treat-strip" id="menu">
+
+        <h2>EXPLORE OUR TREATS</h2>
+
+        <div class="treat-marquee">
+            <div class="treat-track">
+
+                <!-- First set -->
+                <div class="treat-group">
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="cake.png" alt="Chocolate cake">
+                        </div>
+                        <h3>Cakes</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="pastries.jpg" alt="Pastries">
+                        </div>
+                        <h3>Pastries</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="cookies.jpg" alt="Cookies">
+                        </div>
+                        <h3>Cookies</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="brownies.jpg" alt="Brownies">
+                        </div>
+                        <h3>Brownies</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=85" alt="Ice cream sundae">
+                        </div>
+                        <h3>Sundaes</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="truffle.jpg" alt="Chocolate truffles">
+                        </div>
+                        <h3>Truffles</h3>
+                    </div>
+
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="treat-group" aria-hidden="true">
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="cake.png" alt="">
+                        </div>
+                        <h3>Cakes</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="brookie slab.jfif" alt="">
+                        </div>
+                        <h3>Pastries</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="cookies.jpg" alt="">
+                        </div>
+                        <h3>Cookies</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="brownies.jpg" alt="">
+                        </div>
+                        <h3>Brownies</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=85" alt="">
+                        </div>
+                        <h3>Sundaes</h3>
+                    </div>
+
+                    <div class="treat-card">
+                        <div class="treat-circle">
+                            <img src="truffle.jpg" alt="">
+                        </div>
+                        <h3>Truffles</h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== MENU SECTION (3rd section) ===== -->
+    <section class="menu-section" id="gallery" aria-labelledby="menuTitle">
+      <header class="menu-heading">
+        <span class="eyebrow">The Chocolate House</span>
+        <h1 id="menuTitle">Choosing the Right Fit</h1>
+        <p>Handcrafted desserts made with love and premium ingredients</p>
+        <div class="heading-underline"></div>
+      </header>
+
+      <div class="menu-layout">
+        <aside class="promo-card">
+          <span class="promo-pill">The Chocolate House</span>
+          <h2>Fresh Delights,<br>Always Here</h2>
+          <p>Baked with love, topped with happiness!</p>
+          <img class="promo-photo" src="chocolate heaven cake.jfif" alt="Freshly made chocolate dessert" loading="lazy">
+          <div class="promo-bottom">Rich & creamy · Made with love</div>
+        </aside>
+
+        <div class="categories-grid">
+
+          <article class="category-card brownies">
+            <header class="category-heading">
+              <h2>Brownies</h2>
+            </header>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-photo"><img src="chocolate brownie.jfif" alt="Fudgy chocolate brownie"></span>
+                <span class="item-name">Fudge Brownie</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-photo"><img src="oreo brownie.jpeg" alt="Oreo brownie"></span>
+                <span class="item-name">Oreo Brownie</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card sundaes">
+            <header class="category-heading">
+              <h2>Sundaes</h2>
+            </header>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-photo"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=85" alt="Chocolate sundae"></span>
+                <span class="item-name">Chocolate Sundae</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-photo"><img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?auto=format&fit=crop&w=400&q=85" alt="Strawberry sundae"></span>
+                <span class="item-name">Strawberry Sundae</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-photo"><img src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?auto=format&fit=crop&w=400&q=85" alt="Oreo sundae"></span>
+                <span class="item-name">Oreo Sundae</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-photo"><img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=400&q=85" alt="Blueberry sundae"></span>
+                <span class="item-name">Blueberry Sundae</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-photo"><img src="brookie slab.jfif" alt="Caramel sundae"></span>
+                <span class="item-name">Caramel Sundae</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card truffles">
+            <header class="category-heading">
+              <h2>Truffles</h2>
+            </header>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-photo"><img src="chocolate truffle.jfif" alt="Chocolate truffle" loading="lazy"></span>
+                <span class="item-name">Chocolate Truffle</span>
+              </li>
+              
+              <li class="menu-item">
+                <span class="item-photo"><img src="oreo truffle.jfif" alt="Oreo truffle"></span>
+                <span class="item-name">Oreo Truffle</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card cakes">
+            <header class="category-heading">
+              <h2>Cakes</h2>
+            </header>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-photo"><img src="chocolate heaven cake.jfif" alt="Chocolate heaven cake"></span>
+                <span class="item-name">Chocolate Heaven Cake</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-photo"><img src="matilda cake.jfif" alt="Matilda cake tub"></span>
+                <span class="item-name">Matilda Cake Tub</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card brookies">
+            <header class="category-heading">
+              <h2>Brookies</h2>
+            </header>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-photo"><img src="brookie slab.jfif" alt="Classic brookie"></span>
+                <span class="item-name">Classic Brookie</span>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+
+      <footer class="menu-footer">
+        Rich & Creamy · Irresistible Taste · Perfect for Every Craving
+      </footer>
+
+    </section>
+  </main>
+
+  <!-- ===== 4TH SECTION: SHOP ===== -->
+  <div class="shop-section-wrap">
+    <header class="shop-banner" id="shop">
+      <img class="shop-banner-art" src="banner.jpeg" alt="Chocolate cake, pastry, muffins, cookies and a sundae">
+      <div class="shop-banner-overlay">
+        <div class="shop-banner-topline"><span>THE CHOCOLATE HOUSE</span><span>FRESHLY BAKED WITH LOVE</span></div>
+        <button class="shop-cart-open" id="shopOpenCart" type="button" aria-label="Open shopping cart">
+          <span class="shop-cart-icon">🛒</span><span>Cart</span><b id="shopCartCount">0</b>
+        </button>
+      </div>
+      <div class="shop-banner-benefits">
+        <div><span class="shop-benefit-icon">✦</span><span>SELECT YOUR TREATS</span></div>
+        <div><span class="shop-benefit-icon">＋</span><span>ADD TO CART</span></div>
+        <div><span class="shop-benefit-icon">✓</span><span>REVIEW YOUR ORDER</span></div>
+        <div><span class="shop-benefit-icon">♡</span><span>PICKUP OR DELIVERY</span></div>
+      </div>
+    </header>
+
+    <main class="shop-section" id="shopMenu">
+      <div class="shop-section-heading">
+        <span class="shop-eyebrow">MADE FRESH, MADE WITH LOVE</span>
+        <h2>Our Full Menu</h2>
+        <p>Find your favourite sweet treat and add it to your cart.</p>
+        <span class="shop-heading-swish"></span>
+      </div>
+
+      <div class="shop-toolbar">
+        <div class="shop-filters" id="shopFilters" aria-label="Filter products">
+          <button class="shop-filter-btn active" data-filter="All" type="button">All Treats</button>
+          <button class="shop-filter-btn" data-filter="Brownies" type="button">Brownies</button>
+          <button class="shop-filter-btn" data-filter="Brookies" type="button">Brookies</button>
+          <button class="shop-filter-btn" data-filter="Truffles" type="button">Truffles</button>
+          <button class="shop-filter-btn" data-filter="Cakes" type="button">Cakes</button>
+          <button class="shop-filter-btn" data-filter="Sundaes" type="button">Sundaes</button>
+        </div>
+        <label class="shop-search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="shopProductSearch" type="search" placeholder="Search treats..." aria-label="Search menu">
+        </label>
+      </div>
+
+      <div class="shop-product-grid" id="shopProductGrid" aria-live="polite"></div>
+      <div class="shop-empty-state" id="shopEmptyState" hidden>No treats match your search.</div>
+
+      <section class="shop-coming-section" id="shopSundaes">
+        <div class="shop-coming-heading"><span class="shop-eyebrow">A LITTLE SOMETHING TO LOOK FORWARD TO</span><h2>Sundaes</h2><p>Our sundae collection is being prepared with extra love.</p></div>
+        <div class="shop-coming-grid">
+          <article class="shop-product-card shop-coming-soon-card">
+            <div class="shop-product-image"><img src="chocolate.jfif" alt="Chocolate Sundae" loading="lazy"></div>
+            <div class="shop-product-info"><span class="shop-product-category">Sundaes</span><h3>Chocolate Sundae</h3><p class="shop-product-description">A new dessert delight is on its way.</p><div class="shop-product-bottom"><strong class="shop-product-price">Rs. 500</strong><button class="shop-add-button" type="button" data-add="choc-sundae"><span>＋</span> Add to Cart</button></div></div>
+          </article>
+          <article class="shop-product-card shop-coming-soon-card">
+            <div class="shop-product-image"><img src="strawberry.jfif" alt="Strawberry Sundae" loading="lazy"></div>
+            <div class="shop-product-info"><span class="shop-product-category">Sundaes</span><h3>Strawberry Sundae</h3><p class="shop-product-description">A new dessert delight is on its way.</p><div class="shop-product-bottom"><strong class="shop-product-price">Rs. 500</strong><button class="shop-add-button" type="button" data-add="straw-sundae"><span>＋</span> Add to Cart</button></div></div>
+          </article>
+          <article class="shop-product-card shop-coming-soon-card">
+            <div class="shop-product-image"><img src="oreo.jfif" alt="Oreo Sundae" loading="lazy"></div>
+            <div class="shop-product-info"><span class="shop-product-category">Sundaes</span><h3>Oreo Sundae</h3><p class="shop-product-description">A new dessert delight is on its way.</p><div class="shop-product-bottom"><strong class="shop-product-price">Rs. 500</strong><button class="shop-add-button" type="button" data-add="oreo-sundae"><span>＋</span> Add to Cart</button></div></div>
+          </article>
+          <article class="shop-product-card shop-coming-soon-card">
+            <div class="shop-product-image"><img src="blueberry.jfif" alt="Blueberry Sundae" loading="lazy"></div>
+            <div class="shop-product-info"><span class="shop-product-category">Sundaes</span><h3>Blueberry Sundae</h3><p class="shop-product-description">A new dessert delight is on its way.</p><div class="shop-product-bottom"><strong class="shop-product-price">Rs. 500</strong><button class="shop-add-button" type="button" data-add="blue-sundae"><span>＋</span> Add to Cart</button></div></div>
+          </article>
+          <article class="shop-product-card shop-coming-soon-card">
+            <div class="shop-product-image"><img src="caramel.jfif" alt="Caramel Sundae" loading="lazy"></div>
+            <div class="shop-product-info"><span class="shop-product-category">Sundaes</span><h3>Caramel Sundae</h3><p class="shop-product-description">A new dessert delight is on its way.</p><div class="shop-product-bottom"><strong class="shop-product-price">Rs. 500</strong><button class="shop-add-button" type="button" data-add="cara-sundae"><span>＋</span> Add to Cart</button></div></div>
+          </article>
+        </div>
+      </section>
+      <p class="shop-menu-note">All prices are in PKR (Rs.). Truffles have a minimum order of 5 pieces.</p>
+    </main>
+  </div>
+
+  <div class="shop-cart-backdrop" id="shopCartBackdrop"></div>
+  <aside class="shop-cart-drawer" id="shopCartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="shop-cart-header"><div><span class="shop-eyebrow">YOUR ORDER</span><h2>Shopping Cart</h2></div><button class="shop-cart-close" id="shopCloseCart" type="button" aria-label="Close cart">×</button></div>
+    <div class="shop-cart-items" id="shopCartItems"><p class="shop-cart-empty">Your cart is waiting for something sweet.</p></div>
+    <div class="shop-cart-footer">
+      <div class="shop-subtotal-line"><span>Subtotal</span><strong id="shopCartSubtotal">Rs. 0</strong></div>
+      <p class="shop-cart-disclaimer">Delivery charges, if any, can be confirmed when you place your order.</p>
+      <button class="shop-checkout-button" id="shopCheckoutButton" type="button" disabled>Continue on WhatsApp <span>→</span></button>
+      <button class="shop-continue-button" id="shopContinueShopping" type="button">Continue Shopping</button>
+    </div>
+  </aside>
+  <div class="shop-toast" id="shopToast" role="status" aria-live="polite"></div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+
+      <div class="contact-heading">
+        <span class="contact-eyebrow">GET IN TOUCH</span>
+        <h2>Order Now or Say Hello</h2>
+        <p>We'd love to hear from you. Place an order, ask a question, or just drop a message.</p>
+      </div>
+
+      <div class="contact-cards">
+
+        <!-- WhatsApp -->
+        <a class="contact-card contact-wa"
+           href="https://wa.me/923214402616?text=Hello%20The%20Chocolate%20House!%20I%27d%20like%20to%20place%20an%20order."
+           target="_blank" rel="noopener noreferrer">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 0 1-5.001-1.372l-.359-.214-3.724.886.904-3.63-.234-.373A9.754 9.754 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+            </svg>
+          </div>
+          <div class="contact-card-body">
+            <h3>WhatsApp</h3>
+            <p>Chat with us &amp; place your order directly</p>
+            <span class="contact-card-cta">0321 4402616 →</span>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a class="contact-card contact-ig"
+           href="https://www.instagram.com/chocolatyyyhouse/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </div>
+          <div class="contact-card-body">
+            <h3>Instagram</h3>
+            <p>See our latest treats &amp; behind-the-scenes</p>
+            <span class="contact-card-cta">@chocolatyyyhouse →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="contact-note">
+        <span>Made with love in Islamabad</span>
+        <span class="contact-dot">·</span>
+        <span>Fresh daily orders via WhatsApp</span>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 The Chocolate House · Islamabad</span>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+/* ===== 4TH SECTION SHOP SCRIPT ===== */
+(function(){
+const IMAGE_DATA = {
+  "fudge-brownie.jpg": "chocolate brownie.jfif",
+  "box-of-2-brownies.jpg": "box of 2 brownies.jfif",
+  "box-of-4-brownies.jpg": "box of 4 brownies.jfif",
+  "box-of-6-brownies.jpg": "box of 6 brownies.jfif",
+  "mini-brownies.jpg": "box of mini brownies.jfif",
+  "brookie-6.jpg": "box of 6 brookies.jfif",
+  "brookie-8.jpg": "box of 8 brookies.jfif",
+  "oreo-brownie.jpg": "oreo brownie.jpeg",
+  "brookie.jpg": "brookie slab.jfif",
+  "chocolate-truffle.jpg": "chocolate truffle.jfif",
+  "oreo-truffle.jpg": "oreo truffle.jfif",
+  "chocolate-heaven-cake.jpg": "chocolate heaven cake.jfif",
+  "matilda-cake-tub.jpg": "matilda cake.jfif"
+};
+const PRODUCTS = [{"id":"brownie-2","name":"Box of 2 Brownies","category":"Brownies","price":550,"image":"box-of-2-brownies.jpg","description":"Two rich, fudgy chocolate brownies."},{"id":"brownie-4","name":"Box of 4 Brownies","category":"Brownies","price":1000,"image":"box-of-4-brownies.jpg","description":"Four freshly baked chocolate brownies."},{"id":"brownie-6","name":"Box of 6 Brownies","category":"Brownies","price":1450,"image":"box-of-6-brownies.jpg","description":"Six signature fudgy brownies."},{"id":"fudge-slab","name":"Fudge Brownie Slab","category":"Brownies","price":3000,"image":"fudge-brownie.jpg","description":"A generous slab of rich fudge brownie."},{"id":"oreo-slab","name":"Oreo Fudge Brownie Slab","category":"Brownies","price":3000,"image":"oreo-brownie.jpg","description":"Fudgy brownie finished with Oreo pieces."},{"id":"mini-brownies","name":"Box of Mini Brownies","category":"Brownies","price":600,"image":"mini-brownies.jpg","description":"Bite-sized brownie treats."},{"id":"brookie-6","name":"Box of 6 Brookies","category":"Brookies","price":1800,"image":"brookie-6.jpg","description":"A delicious brownie and cookie combination."},{"id":"brookie-8","name":"Box of 8 Brookies","category":"Brookies","price":2000,"image":"brookie-8.jpg","description":"Eight freshly baked brookies."},{"id":"brookie-slab","name":"Brookies Slab","category":"Brookies","price":3500,"image":"brookie.jpg","description":"A shareable slab of chocolate chip brookies."},{"id":"choc-truffle","name":"Chocolate Truffle","category":"Truffles","price":150,"image":"chocolate-truffle.jpg","description":"Smooth and rich chocolate truffle. Minimum order: 5.","minQty":5},{"id":"oreo-truffle","name":"Oreo Truffle","category":"Truffles","price":150,"image":"oreo-truffle.jpg","description":"Creamy Oreo truffle coated in chocolate. Minimum order: 5.","minQty":5},{"id":"choc-heaven","name":"Chocolate Heaven Cake","category":"Cakes","price":2500,"image":"chocolate-heaven-cake.jpg","description":"A decadent chocolate layer cake. 2 lb."},{"id":"matilda-tub","name":"Matilda Cake Tub","category":"Cakes","price":800,"image":"matilda-cake-tub.jpg","description":"A rich, gooey chocolate cake tub."},{"id":"choc-sundae","name":"Chocolate Sundae","category":"Sundaes","price":500,"image":"sundae.jpg","description":"A rich chocolate sundae."},{"id":"straw-sundae","name":"Strawberry Sundae","category":"Sundaes","price":500,"image":"sundae.jpg","description":"A fresh strawberry sundae."},{"id":"oreo-sundae","name":"Oreo Sundae","category":"Sundaes","price":500,"image":"sundae.jpg","description":"A creamy Oreo sundae."},{"id":"blue-sundae","name":"Blueberry Sundae","category":"Sundaes","price":500,"image":"sundae.jpg","description":"A sweet blueberry sundae."},{"id":"cara-sundae","name":"Caramel Sundae","category":"Sundaes","price":500,"image":"sundae.jpg","description":"A smooth caramel sundae."}];
+const WHATSAPP_NUMBER = "923214402616";
+const CART_KEY = "chocolateHouseCartV1";
+
+const grid = document.getElementById("shopProductGrid");
+const filters = document.getElementById("shopFilters");
+const searchInput = document.getElementById("shopProductSearch");
+const emptyState = document.getElementById("shopEmptyState");
+const cartDrawer = document.getElementById("shopCartDrawer");
+const cartBackdrop = document.getElementById("shopCartBackdrop");
+const cartItems = document.getElementById("shopCartItems");
+const cartCount = document.getElementById("shopCartCount");
+const cartSubtotal = document.getElementById("shopCartSubtotal");
+const checkoutButton = document.getElementById("shopCheckoutButton");
+const toast = document.getElementById("shopToast");
+
+let activeFilter = "All";
+let cart = loadCart();
+
+function money(a){return "Rs. "+Number(a).toLocaleString("en-PK");}
+function loadCart(){try{const s=JSON.parse(localStorage.getItem(CART_KEY)||"[]");return Array.isArray(s)?s.filter(r=>PRODUCTS.some(p=>p.id===r.id)&&Number(r.qty)>0):[];}catch{return[];}}
+function saveCart(){localStorage.setItem(CART_KEY,JSON.stringify(cart));}
+
+function productCard(p){return`<article class="shop-product-card"><div class="shop-product-image"><img src="${IMAGE_DATA[p.image]||""}" alt="${p.name}" loading="lazy"></div><div class="shop-product-info"><span class="shop-product-category">${p.category}</span><h3>${p.name}</h3><p class="shop-product-description">${p.description}</p><div class="shop-product-bottom"><strong class="shop-product-price">${money(p.price)}</strong><button class="shop-add-button" type="button" data-add="${p.id}"><span>＋</span> Add to Cart</button></div></div></article>`;}
+
+function renderProducts(){
+  const term=searchInput.value.trim().toLowerCase();
+  const filtered=PRODUCTS.filter(p=>(activeFilter==="All"||p.category===activeFilter)&&`${p.name} ${p.category} ${p.description}`.toLowerCase().includes(term));
+  grid.innerHTML=filtered.map(productCard).join("");
+  emptyState.hidden=filtered.length>0;
+}
+function addToCart(id){
+  const p=PRODUCTS.find(p=>p.id===id);if(!p)return;
+  const amt=p.minQty||1;
+  const ex=cart.find(r=>r.id===id);
+  if(ex)ex.qty+=amt;else cart.push({id,qty:amt});
+  saveCart();renderCart();showToast(`${p.name} added to your cart`);
+}
+function changeQty(id,dir){
+  const p=PRODUCTS.find(p=>p.id===id);const r=cart.find(r=>r.id===id);if(!p||!r)return;
+  const step=p.minQty||1;r.qty+=dir*step;
+  if(r.qty<step)cart=cart.filter(r=>r.id!==id);
+  saveCart();renderCart();
+}
+function removeFromCart(id){cart=cart.filter(r=>r.id!==id);saveCart();renderCart();}
+
+function renderCart(){
+  const count=cart.reduce((s,r)=>s+r.qty,0);
+  const sub=cart.reduce((s,r)=>{const p=PRODUCTS.find(p=>p.id===r.id);return s+(p?p.price*r.qty:0);},0);
+  cartCount.textContent=count;cartSubtotal.textContent=money(sub);checkoutButton.disabled=!cart.length;
+  if(!cart.length){cartItems.innerHTML='<p class="shop-cart-empty">Your cart is waiting for something sweet.</p>';return;}
+  cartItems.innerHTML=cart.map(r=>{const p=PRODUCTS.find(p=>p.id===r.id);return`<div class="shop-cart-line"><img src="${IMAGE_DATA[p.image]||""}" alt=""><div><h3>${p.name}</h3><span class="shop-line-price">${money(p.price)} each</span><div class="shop-qty-controls"><button type="button" data-sminus="${p.id}">−</button><span>${r.qty}</span><button type="button" data-splus="${p.id}">＋</button></div></div><button class="shop-remove-line" type="button" data-sremove="${p.id}">Remove</button></div>`;}).join("");
+}
+function openCart(){cartDrawer.classList.add("open");cartBackdrop.classList.add("show");cartDrawer.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";}
+function closeCart(){cartDrawer.classList.remove("open");cartBackdrop.classList.remove("show");cartDrawer.setAttribute("aria-hidden","true");document.body.style.overflow="";}
+function showToast(msg){toast.textContent=msg;toast.classList.add("show");clearTimeout(showToast._t);showToast._t=setTimeout(()=>toast.classList.remove("show"),2100);}
+
+filters.addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;activeFilter=b.dataset.filter;filters.querySelectorAll(".shop-filter-btn").forEach(x=>x.classList.toggle("active",x===b));renderProducts();});
+searchInput.addEventListener("input",renderProducts);
+grid.addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(b)addToCart(b.dataset.add);});
+document.getElementById("shopSundaes").addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(b)addToCart(b.dataset.add);});
+cartItems.addEventListener("click",e=>{
+  const p=e.target.closest("[data-splus]"),m=e.target.closest("[data-sminus]"),r=e.target.closest("[data-sremove]");
+  if(p)changeQty(p.dataset.splus,1);if(m)changeQty(m.dataset.sminus,-1);if(r)removeFromCart(r.dataset.sremove);
+});
+document.getElementById("shopOpenCart").addEventListener("click",openCart);
+document.getElementById("shopCloseCart").addEventListener("click",closeCart);
+document.getElementById("shopContinueShopping").addEventListener("click",closeCart);
+cartBackdrop.addEventListener("click",closeCart);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart();});
+
+checkoutButton.addEventListener("click",()=>{
+  if(!cart.length)return;
+  const lines=cart.map(r=>{const p=PRODUCTS.find(p=>p.id===r.id);return`${p.name} x ${r.qty} = ${money(p.price*r.qty)}`;});
+  const sub=cart.reduce((s,r)=>{const p=PRODUCTS.find(p=>p.id===r.id);return s+p.price*r.qty;},0);
+  const msg=["Hello The Chocolate House! I'd like to place an order:","", ...lines,"",`Subtotal: ${money(sub)}`,"","Please confirm availability and delivery/pickup details."].join("\n");
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank","noopener,noreferrer");
+});
+
+renderProducts();renderCart();
+})();
+  </script>
+</body>
+</html>
